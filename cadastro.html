@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Clínica</title>
+</head>
+<body>
+    <div id = "titulo"><h1>Ficha Clínica</h1></div>
+    <p id = "subtitulo">Dados Pessoais</p>
+
+    <form>
+        <fieldset>
+            <div>
+                <label>Nome</label>
+                <input type = "text" name = "Nome">
+            </div>
+            
+            <div>
+                <label>Sobrenome</label>
+                <input type = "text" name = "Sobrenome">
+            </div>
+            <div>
+                <label>Telefone</label>
+                <input type = "tel" name = "Telefone">
+            </div>
+            <div>
+                <label>E-mail</label>
+                <input type = "email" name = "email">
+            </div>
+        </fieldset>
+        
+        <p>
+            <h2>Agendamento</h2>
+        </p>
+        
+        <div>
+            <label>Informe o motivo da consulta: </label>
+            <label>
+                <input type="radio" name="motivo" value="avaliacao" checked>Avaliação
+            </label>
+            <label>
+                <input type="radio" name="motivo" value="clinicageral">Clínica Geral
+            </label>
+            <label>
+                <input type="radio" name="motivo" value="manutencao">Manutenção de Ortodontia
+            </label>
+            <label>
+                <input type="radio" name="motivo" value="retorno">Retorno para Clínica Geral
+            </label>
+        </div>
+        <br/>
+
+        <div>
+            <label for="profissionais">Profissional:</label>
+            <select name="profissional" id="profissional-select">
+                <option value="">--Por favor, selecione um profissional--</option>
+                <option value = "samuel">Samuel</option>
+                <option value = "alice">Alice</option>
+                <option value = "mateus">Mateus</option>                
+            </select>
+        </div>
+
+        <div>
+        <p>Escolha abaixo o melhor dia e horário que retornaremos confirmando o mais rápido possivel</p>
+        <label for="semana">Dia da Semana </label>
+            <select name="semana" id="semana-select">
+                <option value=None>--Dias da semana--</option>
+                <option value="segunda-feira">Segunda-feira</option>
+                <option value="terca-feira">Terça-feira</option>
+                <option value="quarta-feira">Quarta-feira</option>
+                <option value="quinta-feira">Quinta-feira</option>
+                <option value="sexta-feira">Sexta-feira</option>
+                <option value="sabado">Sábado</option>                
+            </select>
+
+        <label for="horario">Horário</label>
+            <select name="hora" id="hora-select">
+                <option value=None>--Horários--</option>
+                <option value="8">8:00h às 9:00h</option>
+                <option value="9">9:00h às 10:00h</option>
+                <option value="10">10:00h às 11:00h</option>
+                <option value="11">11:00h às 12:00h</option>
+                <option value="14">14:00h às 15:00h</option>
+                <option value="15">15:00h às 16:00h</option>                
+            </select>
+            
+            
+        </div>
+        <br/>
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Apresentou na ultima semana alguns destes sintomas?</strong></label><br><br>
+                <input type="checkbox" id="sintoma1" name="febre" value="febre">
+                <label for = "sintoma1"> Febre</label>
+                <input type="checkbox" id="sintoma2" name="gripe" value="gripe">
+                <label for = "sintoma2"> Sintomas Gripais</label>
+                <input type="checkbox" id="sintoma3" name="diarreia" value="diarreia">
+                <label for = "sintoma3"> Diarréia</label>
+                <input type="checkbox" id="sintoma4" name="moleza" value="moleza">
+                <label for = "sintoma4"> Dores no corpo</label>
+                <br>
+                <input type="checkbox" id="teste" name="teste" value="teste">
+                <label for = "teste"> Testei positivo para COVID</label>                
+            </div>
+        </fieldset>
+        <br/>
+        <button class="botao" type="submit" onsubmit="">Enviar</button>        
+
+    </form>
+    
+
+</body>
+</html>
